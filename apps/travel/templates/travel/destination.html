@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Destination</title>
+  </head>
+  <body>
+    <a href="/travels">Home</a>
+    <a href="/logout">Logout</a>
+    <div class="">
+      <h3></h3>
+      <p>Planned By: {{details.user_id.name}}</p>
+      <p>Description: {{details.description}}</p>
+      <p>Travel Date From: {{details.start_date}}</p>
+      <p>Travel Date To: {{details.end_date}}</p>
+    </div>
+    <div class="">
+      <h3>Other users joining the trip:</h3>
+      {% for other in others %}
+        <p>{{other.user_id.name}}</p>
+      {% endfor %}
+    </div>
+  </body>
+</html>
